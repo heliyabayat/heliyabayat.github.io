@@ -2,61 +2,63 @@ body {
   margin: 0;
   padding: 0;
 }
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
 body {
+  font-weight: 300;
   font-family: "Poppins", sans-serif;
+}
+header {
+  background: #1c1d25;
 }
 a {
   text-decoration: none;
 }
 h1 {
   font-size: 120px;
-  margin: 0;
 }
 h2 {
   font-size: 50px;
 }
 p {
-  margin: 0;
-  font-weight: 300;
   font-size: 28px;
 }
-.navbar-link {
-  color: white;
-  padding: 8px 5px;
-  border-radius: 4px;
-}
-section {
-  background-color: white;
+.container {
+  max-width: 84rem;
+  margin: 0 auto;
 }
 nav {
   display: flex;
   flex-direction: column-reverse;
 }
-ul {
+
+.navbar-link {
+  color: white;
+  padding: 8px 5px;
+  border-radius: 4px;
+}
+.navbar-link:hover {
+  background-color: #1c1d25;
+  border-radius: 10px;
+}
+#nav-list {
   display: flex;
   list-style-type: none;
   width: 600px;
   justify-content: space-around;
   font-size: 30px;
 }
-ul.show {
+#nav-list.show {
   display: block;
 }
-li {
-  text-decoration: none;
-}
-.navbar-link:hover {
-  background-color: #1c1d25;
-  border-radius: 10px;
-  padding: 5px 10px;
-}
-.button-text {
-  color: white;
-}
+
 .hero-area {
   display: flex;
   justify-content: space-between;
-  height: 100%;
   align-items: center;
 }
 .hero {
@@ -64,21 +66,18 @@ li {
   height: 100vh;
   color: white;
   font-size: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
-.hero-text {
-  margin-left: 80px;
-  margin-bottom: 100px;
-}
 .button {
-  width: 200px;
-  height: 50px;
+  color: white;
+  padding: 5px 10px;
   border-radius: 40px;
-  text-align: center;
   background-color: rgb(4, 186, 186);
-  font-weight: 100;
+  font-weight: 300;
   font-size: 30px;
-  margin-top: 10px;
 }
 
 .button:hover {
@@ -86,7 +85,6 @@ li {
 }
 .button:active {
   background-color: grey;
-  color: white;
 }
 
 .subtext {
@@ -106,9 +104,7 @@ li {
   justify-content: space-around;
   padding: 60px;
 }
-.sub-section-alternative {
-  display: flex;
-  flex-direction: column;
+.text-center {
   text-align: center;
 }
 
@@ -145,10 +141,10 @@ li {
 hr {
   margin-left: 20px;
   margin-right: 20px;
-  /* margin-inline: 20px; */
 }
-.project-links {
+.project-link {
   color: rgb(4, 186, 186);
+  display: block;
 }
 
 .hamburger {
