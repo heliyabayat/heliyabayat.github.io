@@ -87,6 +87,9 @@ nav {
   background-color: grey;
 }
 
+.about-me-section {
+  height: 100vh;
+}
 .subtext {
   font-size: 15px;
   font-weight: 300;
@@ -106,6 +109,7 @@ nav {
 }
 .text-center {
   text-align: center;
+  margin-bottom: 1rem;
 }
 
 .headshot-container {
@@ -127,6 +131,7 @@ nav {
   gap: 30px;
   display: flex;
   justify-content: space-around;
+  margin-bottom: 1rem;
 }
 @media only screen and (max-width: 1000px) {
   .project-container {
@@ -171,4 +176,37 @@ hr {
     flex-direction: column-reverse;
     background: #04baba;
   }
+}
+#contact {
+  height: 400px;
+  background: #1c1d25;
+}
+#contact h2 {
+  color: white;
+}
+
+#contact p {
+  color: white;
+}
+#contact a {
+  margin-top: 1rem;
+}
+.about-me-section {
+  display: flex;
+}
+.sub-section {
+  display: flex;
+}
+
+.skills-container {
+  display: flex;
+  justify-content: space-around;
+}
+#contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+#contact p {
+  margin-bottom: 1rem;
 }
