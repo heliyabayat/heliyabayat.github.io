@@ -35,6 +35,9 @@ nav {
   display: flex;
   flex-direction: column-reverse;
 }
+ul{
+  list-style-type: none;
+}
 
 .navbar-link {
   color: white;
@@ -87,9 +90,6 @@ nav {
   background-color: grey;
 }
 
-.about-me-section {
-  height: 100vh;
-}
 .subtext {
   font-size: 15px;
   font-weight: 300;
@@ -118,31 +118,32 @@ nav {
 }
 
 .headshot {
-  width: 300px;
-  border-radius: 50px;
+  width: 100%;
+  height: auto;
+  justify-items: left;
 }
-.project-card {
-  width: 300px;
-  border-radius: 4px;
-  box-shadow: 0px 5px 10px rgb(176, 173, 173);
-  padding: 1rem;
+
+.aboutme{
+  margin-bottom: 2rem;
+  background:#C9A8E3;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 2rem;
 }
-.project-container {
-  gap: 30px;
-  display: flex;
-  justify-content: space-around;
-  margin-bottom: 1rem;
+.aboutme h2{
+  margin-bottom: 2rem;
+  font-size: 5rem;
+  white-space: nowrap;
 }
-@media only screen and (max-width: 1000px) {
-  .project-container {
-    display: flex;
-    flex-wrap: wrap;
-  }
+.aboutme p{
+  font-size: 2rem;
 }
-.project-image {
-  width: 150px;
-  margin-top: 25px;
+.information{
+  padding: 2rem;
+  display: grid;
+  place-content: center;
 }
+
 hr {
   margin-left: 20px;
   margin-right: 20px;
@@ -169,8 +170,10 @@ hr {
     display: none;
     margin: 0;
     background-color: #04baba;
+    
     padding-bottom: 40px;
   }
+  
   nav {
     display: flex;
     flex-direction: column-reverse;
@@ -191,16 +194,66 @@ hr {
 #contact a {
   margin-top: 1rem;
 }
-.about-me-section {
-  display: flex;
-}
-.sub-section {
-  display: flex;
-}
 
 .skills-container {
   display: flex;
+  justify-content: space-evenly;
+}
+.skills {
+  width: 300px;
+  background: #fefcff;
+  box-shadow: 0px 5px 11px rgb(176, 173, 173);
+  border-radius: 8px;
+}
+.skills ul{
+  padding-left: 2rem;
+}
+.skills li {
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 3rem;
+}
+.skills__title{
+font-size: 42px;
+  background: #FDB364;
+  padding: 1rem;
+  border-radius: 6px 6px 0 0;
+}
+
+
+#projects {
+  margin-bottom: 3rem;
+}
+.img-bg {
+  background-color: #04a5a5;
+}
+.project-card h3 {
+  margin: 1rem 0;
+}
+.projects-header {
+  padding: 5rem;
+}
+.project-card {
+  width: 300px;
+  border-radius: 4px;
+  box-shadow: 0px 5px 10px rgb(176, 173, 173);
+  padding: 1rem;
+}
+.project-container {
+  gap: 30px;
+  display: flex;
   justify-content: space-around;
+  margin-bottom: 1rem;
+}
+@media only screen and (max-width: 1000px) {
+  .project-container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+.project-image {
+  width: 150px;
+  margin-top: 25px;
 }
 #contact {
   display: flex;
@@ -209,4 +262,10 @@ hr {
 }
 #contact p {
   margin-bottom: 1rem;
+}
+
+.grid{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 2rem;
 }
