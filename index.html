@@ -1,24 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <link rel="stylesheet" href="src/styles.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+      crossorigin="anonymous"
+    />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700&display=swap"
       rel="stylesheet"
     />
-    <script
-      src="https://kit.fontawesome.com/3040d5728b.js"
-      crossorigin="anonymous"
-    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+    />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio</title>
+    <link rel="stylesheet" href="src/styles.css" />
   </head>
   <body>
     <header>
-      <div class="container">
+      <!-- <div class="container">
         <nav>
           <ul id="nav-list">
             <li><a class="navbar-link" href="#aboutme">about me</a></li>
@@ -29,16 +35,59 @@
             <i class="fas fa-bars"></i>
           </button>
         </nav>
-      </div>
+      </div> -->
+      <nav class="navbar navbar-expand-lg navbar-bg navbar-dark">
+        <div class="container">
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"><i class="bi bi-list"></i></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a
+                  class="nav-link active fs-2 ms-4"
+                  aria-current="page"
+                  href="#About"
+                  title="About😊"
+                  >About</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link fs-2 ms-4"
+                  href="#Projects"
+                  title="Projects😎"
+                  >Projects</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link fs-2 ms-4" href="#Contact" title="Contact😃"
+                  >Contact</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
     </header>
 
     <section class="hero">
       <div class="container">
         <div class="hero-area">
           <div class="hero-text">
-            <h1>Heliya Bayat Makoo</h1>
+            <h1 class="display-1">Heliya Bayat Makoo</h1>
             <p>web developer</p>
-            <a class="button" href="#aboutme">About me </a>
+            <a class="btn btn-primary btn-lg" href="#About" title="About"
+              >About me
+            </a>
           </div>
           <div class="socials">
             <div>
@@ -76,129 +125,180 @@
       </div>
     </section>
     <!-- about me -->
-    <section class="aboutme">
-      <div class="information">
-        <h2>About me</h2>
-        <p>
-          I am a software engineer with experience in developing frontend
-          applications. I am passionate about creating user-friendly interfaces
-          and enjoy working on projects that require creativity and innovation.
-          I am open-minded and enjoy collaborating with others to find the best
-          solutions to complex problems
-        </p>
+    <section class="row g-0 mb-5" id="About" w-100>
+      <div
+        class="col-lg-6 bg-secondary d-grid p-4"
+        style="place-content: center"
+      >
+        <div class="container">
+          <h2 class="display-1">About me</h2>
+          <p class="fs-3">
+            I am a software engineer with experience in developing frontend
+            applications. I am passionate about creating user-friendly
+            interfaces and enjoy working on projects that require creativity and
+            innovation. I am open-minded and enjoy collaborating with others to
+            find the best solutions to complex problems
+          </p>
+        </div>
       </div>
-      <div class="headshot-container">
-        <img class="headshot" src="src/images/heliya.jpg" alt="" />
+      <div class="col-lg-6">
+        <img
+          class="headshot"
+          style="
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            object-position: center;
+          "
+          src="src/images/heliya.jpg"
+          alt=""
+        />
       </div>
     </section>
     <!--skills-->
-    <section class="container">
-      <div class="skills-container">
-        <div class="skills">
-          <h3 class="skills__title">software</h3>
-          <ul>
-            <li>Adobe XD</li>
-            <li>Adobe illustration</li>
-            <li>Adobe Premiere</li>
-            <li>Figma</li>
-            <li>Photo shop</li>
-          </ul>
+    <section class="container py-5">
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="card h-100">
+            <div class="card-header bg-purple text-light">
+              <h3>software</h3>
+            </div>
+            <div class="card-body">
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item">Adobe XD</li>
+                <li class="list-group-item">Adobe illustration</li>
+                <li class="list-group-item">Adobe Premiere</li>
+                <li class="list-group-item">Figma</li>
+                <li class="list-group-item">Photo shop</li>
+              </ul>
+            </div>
+          </div>
         </div>
-
-        <div class="skills">
-          <h3 class="skills__title">Coding</h3>
-          <ul>
-            <li>HTML</li>
-            <li>Css</li>
-            <li>JS</li>
-            <li>React</li>
-            <li>UI and UX</li>
-          </ul>
+        <div class="col-md-4">
+          <div class="card h-100">
+            <div class="card-header bg-purple text-light">
+              <h3>Coding</h3>
+            </div>
+            <div class="card-body">
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item">HTML</li>
+                <li class="list-group-item">Css</li>
+                <li class="list-group-item">JS</li>
+                <li class="list-group-item">React</li>
+                <li class="list-group-item">Tailwind</li>
+                <li class="list-group-item">bootstrap</li>
+              </ul>
+            </div>
+          </div>
         </div>
-        <div class="skills">
-          <h3 class="skills__title">soft skills</h3>
-          <ul>
-            <li>teamwork</li>
-            <li>self motivation</li>
-            <li>A sense of humor</li>
-          </ul>
+        <div class="col-md-4">
+          <div class="card h-100">
+            <div class="card-header bg-purple text-light">
+              <h3>Soft skills</h3>
+            </div>
+            <div class="card-body">
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item">Self motivation</li>
+                <li class="list-group-item">critical thinking</li>
+                <li class="list-group-item">Team player</li>
+                <li class="list-group-item">excellent communication</li>
+                <li class="list-group-item">creativity</li>
+              </ul>
+            </div>
+          </div>
         </div>
       </div>
     </section>
     <!-- project -->
-    <section class="text-center" id="projects">
+    <section id="Projects">
       <div class="container">
-        <h2 class="projects-header">Projects</h2>
-        <div class="project-container">
-          <div class="project-card">
-            <div class="img-bg">
-              <img
-                class="project-image"
-                src="src/images/pvkarLogo.png"
-                alt=""
-              />
-            </div>
-
-            <h3>project one</h3>
-            <p class="subtext">Lorem ipsum dolor sit amet.</p>
-            <hr />
-            <a class="project-link" href=".....">view more</a>
+        <div class="row gy-4">
+          <div class="col-12">
+            <h2 class="display-3">Projects</h2>
           </div>
-          <div class="project-card">
-            <div class="img-bg">
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="card shadow h-100">
               <img
-                class="project-image"
-                src="src/images/pvkarLogo.png"
+                class="card-img-top project-img"
+                src="src/images/blue-sky-background-decoration-clouds-sun-stars-childrens-bright-style3d_153074-161.avif"
                 alt=""
               />
+              <div class="card-body">
+                <h3 class="card-title">weather-app</h3>
+                <p class="text-break">weather app website.</p>
+              </div>
             </div>
-            <h3>project two</h3>
-            <p class="subtext">Lorem ipsum dolor sit amet.</p>
-            <hr />
-
-            <a class="project-link" href=".....">view more</a>
           </div>
-          <div class="project-card">
-            <div class="img-bg">
+          <!-- 2 -->
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="card shadow h-100">
               <img
-                class="project-image"
-                src="src/images/pvkarLogo.png"
+                class="card-img-top project-img"
+                src="src/images/dev-team.jpg"
                 alt=""
               />
+              <div class="card-body">
+                <h3 class="card-title">Ipekdev</h3>
+                <p class="text-break">A website of software company.</p>
+              </div>
             </div>
-            <h3>project 3</h3>
-            <p class="subtext">Lorem ipsum dolor sit amet.</p>
-            <hr />
-
-            <a class="project-link" href=".....">view more</a>
           </div>
-          <div class="project-card">
-            <div class="img-bg">
+          <!-- 3 -->
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="card shadow h-100">
               <img
-                class="project-image"
-                src="src/images/pvkarLogo.png"
+                class="card-img-top project-img"
+                src="src/images/Vi9UPr.jpg"
                 alt=""
               />
+              <div class="card-body">
+                <h3 class="card-title">Pvkar</h3>
+                <p class="text-break">A building industry website.</p>
+              </div>
             </div>
-            <h3>project 4</h3>
-            <p class="subtext">Lorem ipsum dolor sit amet.</p>
-            <hr />
-
-            <a class="project-link" href=".....">view more</a>
+          </div>
+          <!-- 4 -->
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="card shadow h-100">
+              <img
+                class="card-img-top project-img"
+                src="src/images/orf4SG.png"
+                alt=""
+              />
+              <div class="card-body">
+                <h3 class="card-title">Pig game</h3>
+                <p class="text-break">
+                  A funny game which is based on your luck.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </section>
-    <!-- contact -->
-    <section id="contact">
-      <div class="container">
-        <h2>contact me</h2>
-        <p>heliyabayat@hotmail.com</p>
-        <a class="button" href="mailto:heliyabayat@hotmail.com">Hire me</a>
-      </div>
-    </section>
 
-    <footer></footer>
+    <!-- contact -->
+    <footer id="Contact">
+      <div class="container mt-5">
+        <div class="row p-5">
+          <div class="col-sm-6">
+            <h2 class="text-white">contact me</h2>
+            <p class="text-white">heliyabayat@hotmail.com</p>
+            <a
+              class="btn btn-primary"
+              href="mailto:heliyabayat@hotmail.com"
+              title="Email📨"
+              >Hire me</a
+            >
+          </div>
+        </div>
+      </div>
+    </footer>
     <script src="src/app.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>
